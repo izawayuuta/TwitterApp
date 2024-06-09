@@ -10,14 +10,14 @@ import UIKit
 class TweetTableViewCell: UITableViewCell {
 
     
-    @IBOutlet weak var userNameLabel: UILabel!
-    @IBOutlet weak var tweetLabel: UILabel!
+    @IBOutlet weak var UserNameLabel: UILabel!
+    @IBOutlet weak var TweetLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        tweetLabel.numberOfLines = 0
-        userNameLabel.numberOfLines = 1 // ユーザー名は1行で表示する
+        TweetLabel.numberOfLines = 0
+        UserNameLabel.numberOfLines = 1 // ユーザー名は1行で表示する
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
