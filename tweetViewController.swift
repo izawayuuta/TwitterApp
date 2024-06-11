@@ -31,7 +31,7 @@ class tweetViewController: UIViewController, UITextViewDelegate {
         resetFields()
         tweetView.delegate = self
         userNameField.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
-
+        
     }
     
     func loadLatestTweet() {
@@ -70,9 +70,9 @@ class tweetViewController: UIViewController, UITextViewDelegate {
     }
     // TextViewに打ち込まれてないときにボタンを非活性
     func textViewDidChange(_ textView: UITextView) {
-    validateInput()
+        validateInput()
     }
-       
+    
     private func validateInput() {
         let isUserNameFieldEmpty = userNameField.text?.isEmpty ?? true
         let isTweetViewEmpty = tweetView.text.isEmpty

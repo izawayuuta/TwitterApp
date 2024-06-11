@@ -12,8 +12,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     @IBOutlet weak var HomeTableView: UITableView!
     
-    var tweetDataModel: [TweetDataModel] = []
-//    var isDataReset: Bool = false // データリセットの状態を管理するフラグ
+    private var tweetDataModel: [TweetDataModel] = []
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -32,7 +31,6 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         HomeTableView.estimatedRowHeight = 50
         HomeTableView.rowHeight = UITableView.automaticDimension
         loadTweets()
-//        resetTableView() // HomeTableViewをリセットしたいときの関数の処理
     }
         
     func loadTweets() {
@@ -50,11 +48,6 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         navigationController?.pushViewController(goTweet, animated: true)
         
     }
-    // HomeTableViewをリセットしたいときの関数の処理
-//    func resetTableView() {
-//        tweetDataModel = [] // データを空にする
-//        HomeTableView.reloadData() // テーブルビューをリロードする
-//    }
         
     // セクションあたりの行数を返す
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
